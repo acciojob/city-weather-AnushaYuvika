@@ -29,6 +29,8 @@ const App = () => {
       setWeather(data);
     } catch (err) {
       setError(err.message);
+    } finally {
+      setQuery("");
     }
   };
 
