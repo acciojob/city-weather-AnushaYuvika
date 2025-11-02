@@ -3,7 +3,7 @@ import "./../styles/App.css";
 import "regenerator-runtime/runtime";
 
 
-const API_KEY = "b6907d289e10d714a6e88b30761fae22"; 
+const API_KEY = "7b4f3d52eab3b37a14584f34525ad895"; 
 
 const App = () => {
   const [query, setQuery] = useState("");
@@ -18,8 +18,7 @@ const App = () => {
       setWeather(null);
 
       const res = await fetch(
-        `https://samples.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=imperial`
-
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}`
       );
 
       if (!res.ok) {
